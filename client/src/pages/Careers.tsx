@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Card } from '@/components/ui/card';
@@ -18,6 +18,10 @@ interface Job {
 
 export default function Careers() {
   const [expandedJob, setExpandedJob] = useState<number | null>(null);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const jobs: Job[] = [
     {

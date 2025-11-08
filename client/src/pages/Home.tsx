@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
@@ -8,6 +9,13 @@ import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
 export default function Home() {
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (!hash) {
+      window.scrollTo(0, 0);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen">
       <Navbar />
