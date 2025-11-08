@@ -31,11 +31,21 @@ export default function Navbar() {
 
   const handleNavClick = (path: string) => {
     setMobileMenuOpen(false);
-    if (path.startsWith('#')) {
+    if (path === '/') {
+      if (window.location.hash) {
+        window.history.pushState({}, '', '/');
+      }
+      if (location === '/') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        setLocation('/');
+      }
+    } else if (path.startsWith('#')) {
       if (location !== '/') {
         setPendingScroll(path);
         setLocation('/' + path);
       } else {
+        window.history.pushState({}, '', '/' + path);
         const element = document.querySelector(path);
         element?.scrollIntoView({ behavior: 'smooth' });
       }
@@ -46,21 +56,25 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 bg-card border-b border-card-border z-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center gap-3 hover-elevate active-elevate-2 px-3 py-2 rounded-md">
+          <button onClick={() => handleNavClick('/')} className="flex items-center gap-3 hover-elevate active-elevate-2 px-3 py-2 rounded-md">
             <img src={logoImage} alt="Greator Software" className="h-8 w-8" data-testid="img-logo" />
             <div className="flex flex-col">
               <span className="text-xl font-bold text-foreground leading-none" data-testid="text-brand-name">Greator</span>
               <span className="text-sm font-semibold text-muted-foreground leading-none" data-testid="text-brand-subtitle">Software</span>
             </div>
-          </Link>
+          </button>
 
           <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
-              link.path.startsWith('#') ? (
+              link.path.startsWith('#') || link.path === '/' ? (
                 <button
                   key={link.path}
                   onClick={() => handleNavClick(link.path)}
-                  className="px-4 py-2 text-sm font-medium text-foreground hover-elevate active-elevate-2 rounded-md transition-colors"
+                  className={`px-4 py-2 text-sm font-medium rounded-md transition-colors hover-elevate active-elevate-2 ${
+                    location === link.path && !window.location.hash
+                      ? 'text-primary'
+                      : 'text-foreground'
+                  }`}
                   data-testid={`button-nav-${link.label.toLowerCase()}`}
                 >
                   {link.label}
@@ -98,7 +112,7 @@ export default function Navbar() {
         <div className="md:hidden bg-card border-t border-card-border">
           <div className="px-6 py-4 space-y-2">
             {navLinks.map((link) => (
-              link.path.startsWith('#') ? (
+              link.path.startsWith('#') || link.path === '/' ? (
                 <button
                   key={link.path}
                   onClick={() => handleNavClick(link.path)}
