@@ -15,22 +15,25 @@ export default function Contact() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          <Card className="p-8 text-center hover-elevate active-elevate-2 transition-all" data-testid="card-contact-email">
+          <Card className="p-8 text-center border border-card-border shadow-sm" data-testid="card-contact-email">
             <Mail className="h-12 w-12 text-primary mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-card-foreground mb-2" data-testid="text-email-title">Email</h3>
             <a 
               href="mailto:gunasekaran@greatorsoftware.com" 
-              className="text-primary hover:underline"
+              className="text-primary hover:underline break-all"
               data-testid="link-email"
             >
               gunasekaran@greatorsoftware.com
             </a>
           </Card>
 
-          <Card className="p-8 text-center hover-elevate active-elevate-2 transition-all" data-testid="card-contact-chennai">
+          <Card className="p-8 text-center border border-card-border shadow-sm" data-testid="card-contact-chennai">
             <MapPin className="h-12 w-12 text-primary mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-card-foreground mb-2" data-testid="text-chennai-title">Head Office - Chennai</h3>
-            <p className="text-foreground mb-2" data-testid="text-chennai-location">Chennai, Tamil Nadu</p>
+            <p className="text-sm text-foreground mb-2" data-testid="text-chennai-address">
+              G4, D Block, Vandalur Park,<br />
+              Urapakkam, Chennai 603210
+            </p>
             <a 
               href="tel:+919150183874" 
               className="text-primary hover:underline"
@@ -40,12 +43,13 @@ export default function Contact() {
             </a>
           </Card>
 
-          <Card className="p-8 text-center hover-elevate active-elevate-2 transition-all" data-testid="card-contact-perambalur">
+          <Card className="p-8 text-center border border-card-border shadow-sm" data-testid="card-contact-perambalur">
             <Phone className="h-12 w-12 text-primary mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-card-foreground mb-2" data-testid="text-perambalur-title">Branch Office - Perambalur</h3>
             <p className="text-sm text-foreground mb-2" data-testid="text-perambalur-address">
-              First Floor, No.1, Qasim Complex, Abiramipuram<br />
-              Collector office bypass road, Perambalur-621211
+              First Floor, No.1, Qasim Complex,<br />
+              Abiramipuram, Collector office bypass road,<br />
+              Perambalur-621211
             </p>
             <a 
               href="tel:+916385629914" 
