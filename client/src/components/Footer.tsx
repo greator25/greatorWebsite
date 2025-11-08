@@ -48,8 +48,11 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4" data-testid="text-footer-contact-title">Contact</h3>
             <ul className="space-y-2 text-sm">
-              <li className="text-background/90" data-testid="text-footer-email">
-                gunasekaran@greatorsoftware.com
+              <li className="text-background/90" data-testid="text-footer-email-prakash">
+                prakash@greatorsoftware.com
+              </li>
+              <li className="text-background/90" data-testid="text-footer-email-harini">
+                harini@greatorsoftware.com
               </li>
               <li className="text-background/90" data-testid="text-footer-chennai-phone">
                 Chennai: +91 91501 83874

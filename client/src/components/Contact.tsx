@@ -18,13 +18,22 @@ export default function Contact() {
           <Card className="p-8 text-center border border-card-border shadow-sm" data-testid="card-contact-email">
             <Mail className="h-12 w-12 text-primary mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-card-foreground mb-2" data-testid="text-email-title">Email</h3>
-            <a 
-              href="mailto:gunasekaran@greatorsoftware.com" 
-              className="text-primary hover:underline break-all"
-              data-testid="link-email"
-            >
-              gunasekaran@greatorsoftware.com
-            </a>
+            <div className="space-y-2">
+              <a 
+                href="mailto:prakash@greatorsoftware.com" 
+                className="block text-primary hover:underline break-all"
+                data-testid="link-email-prakash"
+              >
+                prakash@greatorsoftware.com
+              </a>
+              <a 
+                href="mailto:harini@greatorsoftware.com" 
+                className="block text-primary hover:underline break-all"
+                data-testid="link-email-harini"
+              >
+                harini@greatorsoftware.com
+              </a>
+            </div>
           </Card>
 
           <Card className="p-8 text-center border border-card-border shadow-sm" data-testid="card-contact-chennai">
