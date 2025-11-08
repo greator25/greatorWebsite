@@ -1,6 +1,6 @@
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Calendar, Users, MapPin, Package } from 'lucide-react';
+import { Calendar, MapPin, Package } from 'lucide-react';
 
 export default function Portfolio() {
   const projects = [
@@ -39,7 +39,7 @@ export default function Portfolio() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <Card key={index} className="p-6 hover-elevate active-elevate-2 transition-all flex flex-col" data-testid={`card-project-${index}`}>
               <div className="mb-4">
@@ -66,16 +66,6 @@ export default function Portfolio() {
             </Card>
           ))}
         </div>
-
-        <Card className="p-8 text-center bg-accent">
-          <Users className="h-12 w-12 text-primary mx-auto mb-4" />
-          <h3 className="text-xl font-semibold text-accent-foreground mb-2" data-testid="text-future-work-title">
-            Future Work
-          </h3>
-          <p className="text-muted-foreground" data-testid="text-future-work-description">
-            We're constantly working on innovative projects. Stay tuned for more additions to our portfolio.
-          </p>
-        </Card>
       </div>
     </section>
   );
