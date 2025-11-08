@@ -21,9 +21,11 @@ export default function Navbar() {
     if (pendingScroll && location === '/') {
       setTimeout(() => {
         const element = document.querySelector(pendingScroll);
-        element?.scrollIntoView({ behavior: 'smooth' });
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
         setPendingScroll(null);
-      }, 100);
+      }, 300);
     }
   }, [location, pendingScroll]);
 
@@ -32,7 +34,7 @@ export default function Navbar() {
     if (path.startsWith('#')) {
       if (location !== '/') {
         setPendingScroll(path);
-        setLocation('/');
+        setLocation('/' + path);
       } else {
         const element = document.querySelector(path);
         element?.scrollIntoView({ behavior: 'smooth' });

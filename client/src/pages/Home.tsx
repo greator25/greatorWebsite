@@ -13,6 +13,13 @@ export default function Home() {
     const hash = window.location.hash;
     if (!hash) {
       window.scrollTo(0, 0);
+    } else {
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
     }
   }, []);
 
