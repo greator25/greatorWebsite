@@ -1,12 +1,13 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'wouter';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import logoImage from '@assets/generated-image (3)_1762624533355.png';
 
 export default function Navbar() {
-  const [location] = useLocation();
+  const [location, setLocation] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [pendingScroll, setPendingScroll] = useState<string | null>(null);
 
   const navLinks = [
     { path: '/', label: 'Home' },
@@ -16,11 +17,26 @@ export default function Navbar() {
     { path: '#contact', label: 'Contact' },
   ];
 
+  useEffect(() => {
+    if (pendingScroll && location === '/') {
+      setTimeout(() => {
+        const element = document.querySelector(pendingScroll);
+        element?.scrollIntoView({ behavior: 'smooth' });
+        setPendingScroll(null);
+      }, 100);
+    }
+  }, [location, pendingScroll]);
+
   const handleNavClick = (path: string) => {
     setMobileMenuOpen(false);
     if (path.startsWith('#')) {
-      const element = document.querySelector(path);
-      element?.scrollIntoView({ behavior: 'smooth' });
+      if (location !== '/') {
+        setPendingScroll(path);
+        setLocation('/');
+      } else {
+        const element = document.querySelector(path);
+        element?.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
