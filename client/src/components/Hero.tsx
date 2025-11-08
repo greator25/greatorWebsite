@@ -19,15 +19,6 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-foreground/90 via-foreground/70 to-foreground/90" />
       
       <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 py-20 text-center">
-        <div className="mb-8 flex justify-center">
-          <img 
-            src={logoImage} 
-            alt="Greator Software Logo" 
-            className="h-24 w-24 md:h-32 md:w-32" 
-            data-testid="img-hero-logo"
-          />
-        </div>
-        
         <div className="mb-8">
           <h1 className="font-bold text-background mb-2">
             <span className="block text-5xl md:text-7xl" data-testid="text-brand-greator">Greator</span>
