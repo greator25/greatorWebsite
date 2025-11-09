@@ -13,9 +13,6 @@ export default function Hero() {
       
       <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-8 py-20 text-center">
         <div className="mb-8">
-          <Badge variant="outline" className="mb-8 px-4 py-2 text-sm font-bold tracking-wide uppercase border-primary text-primary" data-testid="badge-hero-label">
-            AI Software Development
-          </Badge>
           <h1 className="font-black text-foreground mb-8 leading-tight">
             <span className="block text-5xl md:text-7xl lg:text-8xl" data-testid="text-brand-greator">Greator</span>
             <span className="block text-2xl md:text-3xl lg:text-4xl font-semibold text-muted-foreground mt-2" data-testid="text-brand-software">Software</span>
@@ -30,16 +27,16 @@ export default function Hero() {
           World-class AI software development and IT consulting services delivered beyond expectations, every time.
         </p>
 
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          <Badge variant="secondary" className="px-6 py-3 text-sm font-medium bg-primary text-primary-foreground" data-testid="badge-timeline">
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
+          <Badge variant="outline" className="px-4 py-2 text-sm font-medium border-border text-foreground" data-testid="badge-timeline">
             <Clock className="h-4 w-4 mr-2" />
             Delivered Before Timeline
           </Badge>
-          <Badge variant="secondary" className="px-6 py-3 text-sm font-medium bg-primary text-primary-foreground" data-testid="badge-expectations">
+          <Badge variant="outline" className="px-4 py-2 text-sm font-medium border-border text-foreground" data-testid="badge-expectations">
             <Sparkles className="h-4 w-4 mr-2" />
             Beyond Expectations
           </Badge>
-          <Badge variant="secondary" className="px-6 py-3 text-sm font-medium bg-primary text-primary-foreground" data-testid="badge-worldclass">
+          <Badge variant="outline" className="px-4 py-2 text-sm font-medium border-border text-foreground" data-testid="badge-worldclass">
             <Award className="h-4 w-4 mr-2" />
             World-Class Solutions
           </Badge>
@@ -47,7 +44,8 @@ export default function Hero() {
 
         <Button 
           size="lg" 
-          className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-lg font-semibold"
+          variant="outline"
+          className="px-8 py-6 text-lg font-semibold"
           onClick={scrollToContact}
           data-testid="button-get-started"
         >
