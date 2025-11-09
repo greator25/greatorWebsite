@@ -44,8 +44,7 @@ export default function Hero() {
 
         <Button 
           size="lg" 
-          variant="outline"
-          className="px-8 py-6 text-lg font-semibold"
+          className="bg-white text-foreground hover:bg-white/90 px-8 py-6 text-lg font-semibold border border-border"
           onClick={scrollToContact}
           data-testid="button-get-started"
         >
