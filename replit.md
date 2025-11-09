@@ -2,9 +2,16 @@
 
 ## Overview
 
-Greator Software is a professional software development and IT consulting company website built as a modern single-page application. The project showcases the company's services, portfolio, culture, and career opportunities. It features a clean, corporate design inspired by Linear, Stripe, and Vercel, with a focus on professionalism and technical excellence.
+Greator Software is a professional software development and IT consulting company website built as a modern single-page application. The project showcases the company's services, portfolio, culture, and career opportunities. It features a clean, bold design inspired by TED website, with a focus on professionalism and prominent typography.
 
 The application is a full-stack TypeScript project using React for the frontend and Express for the backend, with a PostgreSQL database configured via Drizzle ORM.
+
+**Company Tagline**: "Practising AI Democracy. Scaling Solutions for Every Business."
+
+**Contact Information**:
+- Primary emails: prakash@greatorsoftware.com, harini@greatorsoftware.com
+- Head Office (Chennai): G4, D Block, Vandalur Park, Urapakkam, Chennai 603210 | +91 91501 83874
+- Branch Office (Perambalur): First Floor, No.1, Qasim Complex, Abiramipuram, Collector office bypass road, Perambalur-621211 | +91 63856 29914
 
 ## User Preferences
 
@@ -25,9 +32,12 @@ Preferred communication style: Simple, everyday language.
 
 **Design System**: 
 - Typography uses Montserrat for headings and Inter for body text (Google Fonts)
+- Bold, prominent typography inspired by TED website (font-black for hero headings)
 - Color palette centered around Electric Blue (#0077FF) for primary actions, Deep Charcoal (#0D1B2A) for text, and Off-White (#E0E5EC) for backgrounds
+- Clean, minimalist design with no background images in hero section
 - Consistent spacing scale using Tailwind's spacing units
 - Custom CSS variables defined in `index.css` for theming support
+- Logo: Custom blue "GS" design (image_1762655206646.png)
 
 **State Management**: React Query (TanStack Query) is configured for server state management, though currently not actively used. The application is primarily static content-driven.
 
