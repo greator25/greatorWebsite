@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'wouter';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import logoImage from '@assets/generated-image (3)_1762624533355.png';
+import logoImage from '@assets/image_1762655206646.png';
 
 export default function Navbar() {
   const [location, setLocation] = useLocation();
