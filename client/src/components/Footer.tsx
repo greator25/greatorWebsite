@@ -15,7 +15,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-background/90 text-sm" data-testid="text-footer-tagline">
-              Transforming ideas into intelligent solutions
+              Practising AI Democracy. Scaling Solutions for Every Business.
             </p>
           </div>
 
